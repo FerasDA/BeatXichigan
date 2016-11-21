@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Beat Xichgan",
+  "description": "This extension replaces every M with X for Beat Xichgan week",
+  "version": "1.0",
+  "content_scripts": 
+	[
+		{
+			"matches": ["*://*/*"],
+			"js": ["beatxichigan.js"],
+			"run_at": "document_end"
+		}
+	],
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}

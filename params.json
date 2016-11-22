@@ -1,0 +1,6 @@
+{
+  "name": "Beat Xichigan",
+  "tagline": "Chrome Extension",
+  "body": "# BeatXichigan\r\nBeatXichigan is a Chrome extension that replaces occurrences of \"Michigan\" with \"The State Up North\" and strikes through every occurrence of the letter M\r\n\r\n### Installation\r\nThe extension is available on the [Chrome Web Store](https://chrome.google.com/webstore/detail/beat-xichgan/loggefnnilboacceafpnpcekbacpfgkj)\r\n\r\n### Credits\r\n[@FerasDA](https://twitter.com/FerasDA)\r\n\r\nLicense\r\n----\r\n[MIT](https://github.com/FerasDA/BeatXichigan/blob/master/LICENSE.txt)\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

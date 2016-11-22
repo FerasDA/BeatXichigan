@@ -33,12 +33,13 @@ function beatXichigan(textNode)
 {
 	var v = textNode.nodeValue;
 
+	v = v.replace(/michigan/g, "The State Up North");
+	v = v.replace(/Michigan/g, "The State Up North");
 	v = v.replace(/M/g, "M̶");
 	v = v.replace(/m/g, "m̶");
 	v = v.replace(/wolverine/g, "w̶o̶l̶v̶e̶r̶i̶n̶e̶");
 	v = v.replace(/wolverines/g, "w̶o̶l̶v̶e̶r̶i̶n̶e̶s̶");
-	v = v.replace(/michigan/g, "The State Up North");
-	v = v.replace(/Michigan/g, "The State Up North");
+
 
 
 	textNode.nodeValue = v;

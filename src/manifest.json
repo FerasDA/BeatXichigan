@@ -3,7 +3,7 @@
 
   "name": "Beat Xichgan",
   "description": "This extension replaces every M with X for Beat Xichgan week",
-  "version": "1.0",
+  "version": "1.0.1",
   "content_scripts": 
 	[
 		{

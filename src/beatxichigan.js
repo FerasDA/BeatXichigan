@@ -35,9 +35,9 @@ function beatXichigan(textNode)
 
 	v = v.replace(/michigan/g, "The State Up North");
 	v = v.replace(/Michigan/g, "The State Up North");
-	v = v.replace(/M/g, "M̶");
-	v = v.replace(/m/g, "m̶");
-	v = v.replace(/wolverine/g, "w̶o̶l̶v̶e̶r̶i̶n̶e̶");
+	v = v.replace(/M/g, "X");
+	v = v.replace(/m/g, "X");
+	v = v.replace(/Wolverine/g, "w̶o̶l̶v̶e̶r̶i̶n̶e̶");
 	v = v.replace(/wolverines/g, "w̶o̶l̶v̶e̶r̶i̶n̶e̶s̶");
 
 

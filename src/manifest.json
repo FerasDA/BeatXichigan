@@ -3,12 +3,12 @@
 
   "name": "Beat Xichgan",
   "description": "This extension replaces every M with X for Beat Xichgan week",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "content_scripts": 
 	[
 		{
 			"matches": ["*://*/*"],
-			"js": ["beatxichigan.js"],
+			"js": ["jquery-3.1.1.min.js", "beatxichigan.js"],
 			"run_at": "document_end"
 		}
 	],

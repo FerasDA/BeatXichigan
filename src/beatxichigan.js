@@ -1,46 +1,40 @@
-walk(document.body);
+$(document).ready(function() {
 
-function walk(node) 
-{
-	// I stole this function from here:
-	// https://github.com/panicsteve/cloud-to-butt
-    // who stole it from here
-    // http://is.gd/mwZp7E
-	
-	var child, next;
+	wordScanner( $('body'), 'Michigan', 'The State Up North' )
 
-	switch ( node.nodeType )  
-	{
-		case 1:  // Element
-		case 9:  // Document
-		case 11: // Document fragment
-			child = node.firstChild;
-			while ( child ) 
-			{
-				next = child.nextSibling;
-				walk(child);
-				child = next;
-			}
-			break;
+	letterScanner( $('body'), 'm|M' )
 
-		case 3: // Text node
-			beatXichigan(node);
-			break;
+	corssAWord( $('body'), 'Wolverines')
+
+	function letterScanner( $el, letter ){
+	  $el.contents().each( function(){
+	    if( this.nodeType == 3 ){
+	      $( this ).replaceWith( this.textContent.replace( new RegExp( '('+letter+'+)', 'g' ), "<span style='color: red; text-decoration: line-through;'>$1</span>" ) );
+	    }else{
+	      letterScanner( $( this ), letter )
+	    }
+	  });
 	}
-}
-
-function beatXichigan(textNode) 
-{
-	var v = textNode.nodeValue;
-
-	v = v.replace(/michigan/g, "The State Up North");
-	v = v.replace(/Michigan/g, "The State Up North");
-	v = v.replace(/M/g, "X");
-	v = v.replace(/m/g, "X");
-	v = v.replace(/Wolverine/g, "w̶o̶l̶v̶e̶r̶i̶n̶e̶");
-	v = v.replace(/wolverines/g, "w̶o̶l̶v̶e̶r̶i̶n̶e̶s̶");
 
 
 
-	textNode.nodeValue = v;
-}
+	function wordScanner( $el, word, replacement ){
+	  $el.contents().each( function(){
+	    if( this.nodeType == 3 ){
+	      $( this ).replaceWith( this.textContent.replace( new RegExp( '('+word+'+)', 'g' ), "<span style='color: red;'>"+replacement+"</span>" ) );
+	    }else{
+        wordScanner( $( this ), word, replacement )
+	    }
+	  });
+	}
+
+	function corssAWord( $el, word ){
+	  $el.contents().each( function(){
+	    if( this.nodeType == 3 ){
+	      $( this ).replaceWith( this.textContent.replace( new RegExp( '('+word+'+)', 'g' ), "<span style='color: red; text-decoration: line-through;'>$1</span>" ) );
+	    }else{
+        corssAWord( $( this ), word )
+	    }
+	  });
+	}
+});

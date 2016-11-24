@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "Beat Xichgan",
+  "name": "Beat Xichigan",
   "description": "This extension replaces every M with X for Beat Xichgan week",
   "version": "1.0.2",
   "content_scripts": 

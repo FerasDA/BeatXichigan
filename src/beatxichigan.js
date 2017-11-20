@@ -53,7 +53,7 @@ function surroundMatchingText(textNode, regex, surrounderCreateFunc) {
 
 function createSpan(matchedTextNode) {
     var el = document.createElement("span");
-    el.style.color = "red";
+    el.style.color = "#bb0000";
     el.style.textDecoration = "line-through";
     el.appendChild(matchedTextNode);
     return el;
